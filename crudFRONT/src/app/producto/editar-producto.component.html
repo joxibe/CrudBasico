@@ -1,0 +1,15 @@
+<div class="container" *ngIf="producto">
+  <div class="row mt-5">
+    <div class="col-md-4 mx-auto">
+      <form (ngSubmit)="onUpdate()" novaidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="producto.nombre" required>
+          <label for="precio">Precio</label>
+          <input type="number" name="precio" id="precio" class="form-control" [(ngModel)]="producto.precio" required>
+        </div>
+        <button class="btn btn-outline-success mt-3" [disabled]="!f.valid">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</div>

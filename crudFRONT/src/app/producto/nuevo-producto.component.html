@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4 mx-auto card p-3">
+      <form (ngSubmit)="onCreate()" novaidate #f="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" [(ngModel)]="nombre" required>
+          <label for="precio">Precio</label>
+          <input type="number" name="precio" id="precio" class="form-control" [(ngModel)]="precio" required>
+        </div>
+        <button class="btn btn-outline-success mt-3" [disabled]="!f.valid">Crear</button>
+      </form>
+    </div>
+  </div>
+</div>
